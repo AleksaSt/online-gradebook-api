@@ -15,7 +15,17 @@ class CreateProfessorsTable extends Migration
     {
         Schema::create('professors', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('photo')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+        });
+
+        Schema::table('gradebooks' , function (Blueprint $table){
+            $table->foreign('professor_id')->references('id')->on('professors');
         });
     }
 

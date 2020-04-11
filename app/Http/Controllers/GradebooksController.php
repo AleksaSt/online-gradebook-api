@@ -8,6 +8,6 @@ use App\Gradebook;
 class GradebooksController extends Controller
 {
     public function index(){
-        return Gradebook::paginate(10);
+        return Gradebook::with('professor')->paginate(10);
     }
 }

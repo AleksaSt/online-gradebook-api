@@ -9,11 +9,6 @@ use App\Http\Requests\RegisterRequest;
 class RegisterController extends Controller
 {
     public function store(RegisterRequest $request){
-        
-        $user =  User::create($request->all());
-
-        $user['password'] = bcrypt($user['password']);
-
-        $user->save();
+        User::registerUserAndProfessor($request);
     }
 }

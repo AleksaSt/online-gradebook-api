@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'LoginController@authenticate');
 Route::post('/register', 'RegisterController@store');
 Route::get('/gradebooks', 'GradebooksController@index');
+Route::get('/professors', 'ProfessorsController@index');
+
 
 
