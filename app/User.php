@@ -58,9 +58,5 @@ class User extends Authenticatable implements JWTSubject
         $professor = ['user_id' => $user->id];
         
         Professor::create($professor);
-
-        // $professor['user_id'] = $user->id;
-
-        // $professor->save();
     }
 }

@@ -15,18 +15,18 @@ class GradebooksSeeder extends Seeder
             [
                 'name' => 'Gradebook 2',
             ],
-            // [
-            //     'name' => 'Gradebook 2'
-            // ],
-            // [
-            //     'name' => 'Gradebook 3'
-            // ],
-            // [
-            //     'name' => 'Gradebook 4'
-            // ],
-            // [
-            //     'name' => 'Gradebook 5'
-            // ],
+            [
+                'name' => 'Gradebook 3'
+            ],
+            [
+                'name' => 'Gradebook 4'
+            ],
+            [
+                'name' => 'Gradebook 5'
+            ],
+            [
+                'name' => 'Gradebook 6'
+            ],
             // [
             //     'name' => 'Gradebook 6',
             // ],

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterRequest extends FormRequest
+class StudentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,10 +26,13 @@ class RegisterRequest extends FormRequest
         return [
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
-            'email' => 'required|unique:users|email|max:255',
-            'password' => 'required|min:8|regex:/\w*[0-9]{1,}\w*/',
-            'confirm_password' => 'required|same:password',
-            'accept_terms_and_conditions' => 'accepted'
+            'gradebook_id' => 'required'
+        ];
+    }
+
+    public function messages(){
+        return [
+            'gradebook_id.required' => 'Please select gradebook'
         ];
     }
 }

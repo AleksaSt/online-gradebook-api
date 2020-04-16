@@ -18,9 +18,10 @@ class CreateProfessorsTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->unique()->nullable();
-            $table->string('photo')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('gradebook_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('gradebook_id')->references('id')->on('gradebooks');
             $table->timestamps();
         });
 
